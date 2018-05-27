@@ -1,41 +1,6 @@
-<!doctype html>
-<html>
+{%extends 'blog/base.html'%}
 
-
-<head>
-
-<title>欢迎登录</title>
-
-<script>
-    function myFunction()
-    {
-    document.getElementById("demo").innerHTML="<b><u>RP+300</b></u>";
-    }
-</script>
-<style>
-    #datalist{
-        border-collapse: collapse;
-        width:1000px;                
-    }
-    #datalist td,th{
-        border:1px solid grey;
-        text-align:center;
-        padding:5px;
-    }
-
-</style>
-</head>
-
-
-<body bgcolor="pink" text="blue">
-    <!--貌似没意义
-    <h1>{{hello}}</h1>
-    -->
-    <p id="demo"><b><u>欢迎来到我的主页</u></b></p>
-    <button type="button" onclick="myFunction()"><b>点击有惊喜</b></button>
-    <p><i>版权所有&nbsp;&copy;&lt;2018-5-23&gt;&nbsp;TUTU0016</i></p>
-    
-    <!--罗列所有公开的博客内容-->
+{% block postsheet%}
     <table id="datalist">
     <tr>
         <th>发布时间</th>
@@ -52,7 +17,4 @@
     </tr>
     {% endfor %}
     </table>
-</body>
-
-
-</html>
+{% endblock %}

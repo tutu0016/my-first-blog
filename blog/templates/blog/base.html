@@ -1,0 +1,48 @@
+<!doctype html>
+
+{% load staticfiles %}
+
+<html>
+<head>
+
+<title>有缘千里来相会</title>
+
+<script>
+    function myFunction()
+    {
+    document.getElementById("demo").innerHTML="<b><u>Hello, Stupid MAN！！</b></u>";
+    }
+</script>
+    <!--引入BOOTSTRAP-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css'%}">
+
+<style>
+    body{
+        padding:20px;
+    }
+
+    #datalist{
+        border-collapse: collapse;                   
+    }
+    #datalist td,th{
+        border:1px solid grey;
+        text-align:center;
+        padding:5px 10px;
+    }
+
+</style>
+</head>
+
+
+<body bgcolor="pink" text="blue">
+    <h1 id="demo">欢迎来到我的主页</h1>
+    <button type="button" onclick="myFunction()"><b>点击有惊喜</b></button>
+    <p><i>版权所有&nbsp;&copy;&lt;2018-5-23&gt;&nbsp;TUTU0016</i></p>
+    
+    <!--可扩展块-->
+    {% block postsheet%}
+    {% endblock%}
+</body>
+</html>
